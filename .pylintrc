@@ -1,0 +1,5 @@
+[BASIC]
+disable=missing-docstring,too-few-public-methods,too-many-instance-attributes
+
+[TYPECHECK]
+ignored-modules=pygame,pygame.locals
