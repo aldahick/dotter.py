@@ -56,8 +56,3 @@ class Vector(object):
         x = randint(min_v.x, max_v.x)
         y = randint(min_v.y, max_v.y)
         return Vector(x, y)
-
-class TimeVector(Vector):
-    def __init__(self, x, y, time):
-        super().__init__(x, y)
-        self.time = time
