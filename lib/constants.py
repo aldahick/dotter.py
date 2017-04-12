@@ -1,4 +1,5 @@
 from enum import Enum
+import lib.config as config
 
 COLOR_BLACK = (0x00, 0x00, 0x00)
 COLOR_BLUE = (0x00, 0x00, 0xFF)
@@ -10,16 +11,22 @@ FONT_END = 64
 FONT_MINI = 10
 FONT_NORMAL = 16
 
-ACCEL_SPEED = 0.5
 BACKGROUND_COLOR = COLOR_BLACK
-ENTITY_SIZE = 32
-GAME_WIDTH = 640
-GAME_HEIGHT = 480
-MAX_ENEMY_COUNT = 25
-MAX_TRAIL_COUNT = 50
 PLAYER_COLOR = COLOR_BLUE
-TIME_TO_LOSE = 10 # Seconds
 TRAIL_COLOR = COLOR_RED
+
+# Config variables
+# pylint: disable=I0011,C0103
+config = config.load()
+# pylint: disable=I0011,I0012; enable=C0103
+
+ACCEL_SPEED = config["accel_speed"]
+ENTITY_SIZE = config["entity_size"]
+GAME_WIDTH = config["screen"]["width"]
+GAME_HEIGHT = config["screen"]["height"]
+MAX_ENEMY_COUNT = config["max_enemies"]
+MAX_TRAIL_COUNT = config["max_trail"]
+TIME_TO_LOSE = config["lose_time"] # Seconds
 
 # pylint: disable=I0011,invalid-name
 class Direction(Enum):

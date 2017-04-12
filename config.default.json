@@ -1,0 +1,11 @@
+{
+  "accel_speed": 0.5,
+  "entity_size": 32,
+  "lose_time": 10,
+  "max_enemies": 25,
+  "max_trail": 50,
+  "screen": {
+    "width": 800,
+    "height": 600
+  }
+}

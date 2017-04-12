@@ -32,7 +32,7 @@ class Game(object):
         pygame.mouse.set_visible(False)
         pygame.key.set_repeat(True)
         self.display_info = pygame.display.Info()
-        self.screen = pygame.display.set_mode((800, 600))
+        self.screen = pygame.display.set_mode((GAME_WIDTH, GAME_HEIGHT))
         # pylint: disable=I0011,E1121
         self.background = pygame.Surface(self.screen.get_size()).convert()
         self.background.fill(BACKGROUND_COLOR)
