@@ -80,10 +80,10 @@ class Game(object):
         if now - self.last_spawn_time > 0.5 and len(self.enemies) < MAX_ENEMY_COUNT:
             self.spawn_enemy()
         keys = pygame.key.get_pressed()
-        if keys[Pygame.K_x] or keys[Pygame.K_ESCAPE]:
+        if keys[Pygame.K_ESCAPE]:
             self.end()
             return
-        if keys[Pygame.K_b]:
+        if keys[Pygame.K_r] or keys[Pygame.K_z] or keys[Pygame.K_b]:
             self.player.is_bot = True
         self.player.update(self)
         for index in range(0, len(self.enemies)):
