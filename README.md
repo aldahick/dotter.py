@@ -1,5 +1,7 @@
 # Dotter
 
+This is ancient history, take a look at [the new version (aldahick/dotter)](https://github.com/aldahick/dotter) for a newer, better version.
+
 ## Description
 
 Dotter is a game in which you are a dot, trying to catch all the other dots. If any of the other dots are alive for more than 10 seconds, you lose.
